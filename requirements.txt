@@ -1,0 +1,10 @@
+sphinx>=1.4
+nbconvert
+ipykernel
+sphinx_rtd_theme
+sphinxcontrib-bibtex
+deprecation
+nbsphinx
+xmltodict
+semver
+xarray

@@ -1,0 +1,16 @@
+channels:
+  - conda-forge
+dependencies:
+  - python=3.6
+  - sphinx>=1.4
+  - pandoc
+  - nbconvert
+  - ipykernel
+  - sphinx_rtd_theme
+  - sphinxcontrib-bibtex
+  - numpy
+  - deprecation
+  - git
+  - nbsphinx
+  - semver
+  - xmltodict
