@@ -24,7 +24,7 @@ url = 'https://github.com/YvZheng/pycwr'
 
 # The full version, including alpha/beta/rc tags
 release = '0.2.15'
-
+master_doc = 'index'
 
 # -- General configuration ---------------------------------------------------
 
