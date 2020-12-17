@@ -40,7 +40,6 @@ extensions = ['nbsphinx',
               'sphinx.ext.napoleon',
               'sphinx.ext.mathjax',
               'sphinx.ext.todo',
-              'sphinxcontrib.bibtex',
               ]
 # -- nbsphinx specifics --
 # do not execute notebooks ever while building docs
