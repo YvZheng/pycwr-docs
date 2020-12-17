@@ -23,7 +23,7 @@ author = 'Yu Zheng'
 url = 'https://github.com/YvZheng/pycwr'
 
 # The full version, including alpha/beta/rc tags
-release = '0.2.15'
+release = '0.3.1'
 master_doc = 'index'
 
 # -- General configuration ---------------------------------------------------
