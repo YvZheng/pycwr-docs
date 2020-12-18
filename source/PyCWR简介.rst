@@ -11,7 +11,7 @@ PyCWR简介
     - 建立开放的平台，供研究人员从天气雷达观测中开发复杂的分析和应用程序，它还提供了图形用户界面工具，以方便进行水文学和气象学分析。
 
 
-#. 可以帮助你处理雷达PPI扫描数据，分析重要的天气过程。
+#. 天气雷达PPI扫描显示：
 
     .. image:: _static/PPI.png
         :height: 500px
@@ -19,8 +19,7 @@ PyCWR简介
         :align: center
         :alt: reStructuredText, the markup syntax
 
-#. 也可以帮助你处理RHI扫描数据，方便论文图像的绘制。
-
+#. 天气雷达RHI扫描显示：
 
     .. image:: _static/RHI.png
         :height: 500px
@@ -28,4 +27,38 @@ PyCWR简介
         :align: center
         :alt: reStructuredText, the markup syntax
 
-#. 也支持水凝物分类算法。 
+#. 天气雷达CAPPI插值显示：
+
+    .. image:: _static/CAPPI.png
+        :height: 500px
+        :width: 583px
+        :align: center
+        :alt: reStructuredText, the markup syntax
+
+#. 天气雷达组合反射率因子显示：
+
+    .. image:: _static/CRF.png
+        :height: 500px
+        :width: 583px
+        :align: center
+        :alt: reStructuredText, the markup syntax
+
+#. 天气雷达VCS垂直剖面图：
+
+    .. image:: _static/VCS.png
+        :height: 500px
+        :width: 592px
+        :align: center
+        :alt: reStructuredText, the markup syntax
+
+#. 水凝物分类算法： 
+
+    .. image:: _static/HC.png
+        :height: 500px
+        :width: 623px
+        :align: center
+        :alt: reStructuredText, the markup syntax
+
+#. 更多功能更新中...
+
+
