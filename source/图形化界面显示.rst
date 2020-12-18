@@ -22,6 +22,7 @@
 
 .. image:: _static/GUI.png
     :height: 500px
+    :width: 607px
     :align: center
     :alt: reStructuredText, the markup syntax
 

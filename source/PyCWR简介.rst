@@ -15,6 +15,7 @@ PyCWR简介
 
     .. image:: _static/PPI.png
         :height: 500px
+        :width: 583px
         :align: center
         :alt: reStructuredText, the markup syntax
 
@@ -23,6 +24,7 @@ PyCWR简介
 
     .. image:: _static/RHI.png
         :height: 500px
+        :width: 608px
         :align: center
         :alt: reStructuredText, the markup syntax
 

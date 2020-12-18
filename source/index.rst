@@ -1,5 +1,6 @@
 .. image:: _static/NJIAS.png
     :height: 200px
+    :width: 733px
     :align: center
     :alt: reStructuredText, the markup syntax
 
