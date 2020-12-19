@@ -40,6 +40,7 @@ read_auto函数 ``read_auto(filename, station_lon=None, station_lat=None, statio
         :emphasize-lines: 3,5
 
         from pycwr.io import WSR98DFile
+        filename = "./data/Z_RADR_I_Z9898_20190828181529_O_DOR_SAD_CAP_FMT.bin.bz2"
         PRD = WSR98DFile.WSR98D2NRadar(WSR98DFile.WSR98DBaseData(filename, station_lon=None,\
          station_lat=None, station_alt=None)).ToPRD()
         print(PRD.scan_info)
