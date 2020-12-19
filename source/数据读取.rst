@@ -85,3 +85,19 @@ read_auto函数 ``read_auto(filename, station_lon=None, station_lat=None, statio
         print(PRD.scan_info)
         print(PRD.fields)
 
+
+配合 Py-ART_ 库对雷达数据进行处理
+---------------------------------
+
+.. code-block:: python   
+    :linenos:   
+    :emphasize-lines: 3,5
+
+    from pycwr.io import read_auto 
+    PRD = read_auto(r"./data/Z_RADR_I_Z9898_20190828181529_O_DOR_SAD_CAP_FMT.bin.bz2")
+    print(PRD.scan_info)
+    print(PRD.fields)
+    PyartRadar = PRD.ToPyartRadar()
+
+.. _Py-ART: https://arm-doe.github.io/pyart-docs-travis/index.html
+
