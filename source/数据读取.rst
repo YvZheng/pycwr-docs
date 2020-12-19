@@ -1,3 +1,21 @@
 数据读取
 =================
 
+双偏振雷达普及之前，我国新一代天气雷达数据主要有CINRAD/SA/SB/CB、CINRAD/CC/CCJ、CINRAD/SC/CD等格式，
+而后来随着双偏振雷达数据的普及，我国逐渐将数据统一为WSR98D格式。
+
+自动读取
+-----------
+
+可以使用read_auto函数实现雷达数据类型的识别，并转化为pycwr内置的雷达数据存储格式PRD（Polarimetry Radar Data）类型：
+
+.. code-block:: python   
+    :linenos:   
+    :emphasize-lines: 3,5
+
+    from pycwr.io import read_auto 
+    PRD = read_auto(r"./data/Z_RADR_I_Z9898_20190828181529_O_DOR_SAD_CAP_FMT.bin.bz2")
+    print(PRD.scan_info)
+
+指定类型读取
+--------------
