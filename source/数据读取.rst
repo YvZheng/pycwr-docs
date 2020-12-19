@@ -65,7 +65,7 @@ read_auto函数 ``read_auto(filename, station_lon=None, station_lat=None, statio
         :emphasize-lines: 3,5
 
         from pycwr.io import CCFile
-        filename = "./data/2016070817.48V"
+        filename = "./data/2016070817.48V.gz"
         PRD = CCFile.CC2NRadar(CCFile.CCBaseData(filename, station_lon=None,\
          station_lat=None, station_alt=None)).ToPRD()
         print(PRD.scan_info)
