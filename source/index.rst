@@ -8,7 +8,7 @@
 *PyCWR*：天气雷达数据处理工具库
 ===========================================
 
-:Release: V0.3.1
+:Release: V0.3.4
 :Date: |today|
 
 PyCWR_  （Python based China Weather Radar Toolkit）主要面向中国天气雷达基数据的科研和应用，
@@ -76,7 +76,7 @@ PyCWR_  （Python based China Weather Radar Toolkit）主要面向中国天气�
 
    .. bibliographic fields :
    :作者: 郑玉 [#f1]_ ; 李南 [#f2]_ ; 魏鸣 [#f2]_ ; 楚志刚 [#f2]_
-   :地址: 南京市玄武区昆仑路16号江苏省气象科学研究所
+   :地址: 南京市建邺区雨顺路6号江苏省气象预警中心
    :邮箱: yuzheng1206@outlook.com; zhengyu@cma.gov.cn
    :贡献: 特别感谢李扬、张昕、贾鹏程、吕星超和樊丝慧等人对项目的支持。
 

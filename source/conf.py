@@ -18,12 +18,12 @@ import sphinx_rtd_theme
 # -- Project information -----------------------------------------------------
 
 project = 'pycwr'
-copyright = '2019-2020, pycwr developers'
+copyright = '2019-2021, pycwr developers'
 author = 'Yu Zheng'
 url = 'https://github.com/YvZheng/pycwr'
 
 # The full version, including alpha/beta/rc tags
-release = '0.3.1'
+release = '0.3.4'
 master_doc = 'index'
 
 # -- General configuration ---------------------------------------------------

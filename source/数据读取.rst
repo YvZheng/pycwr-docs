@@ -85,6 +85,18 @@ read_auto函数 ``read_auto(filename, station_lon=None, station_lat=None, statio
         print(PRD.scan_info)
         print(PRD.fields)
 
+#. 数据类型是Phase Array：
+
+    .. code-block:: python
+        :linenos:
+        :emphasize-lines: 3,5
+
+        from pycwr.io import read_PA
+        filename = "./data/Z_RADR_I_ZGZ01_20200820220246_O_DOR_DXK_CAR.bin.bz2"
+        PRD = read_PA(filename)
+        print(PRD.scan_info)
+        print(PRD.fields)
+
 
 配合 Py-ART_ 库对雷达数据进行处理
 ---------------------------------
