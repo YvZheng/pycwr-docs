@@ -33,7 +33,7 @@ PyCWR_  （Python based China Weather Radar Toolkit）主要面向中国天气�
 
    PyCWR简介
    安装方法
-   图形化界面显示
+   GUI
    常见问题
 
 **用户指南**
