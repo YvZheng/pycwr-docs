@@ -31,10 +31,10 @@ PyCWR_  （Python based China Weather Radar Toolkit）主要面向中国天气�
    :hidden:
    :caption: 开始使用
 
-   PyCWR简介
-   安装方法
+   PyCWR_intro
+   installation
    GUI
-   常见问题
+   questions
 
 **用户指南**
 
@@ -57,18 +57,18 @@ PyCWR_  （Python based China Weather Radar Toolkit）主要面向中国天气�
    :hidden:
    :caption: 用户指南
 
-   数据读取
-   数据结构
-   绘图
-   选取数据
-   导出数据
-   定量估测降水
-   水凝物分类
-   衰减订正
-   雷达数据插值
-   组合反射率产品
-   CAPPI产品
-   风场反演
+   data_read
+   data_structure
+   draw
+   select_data
+   save_data
+   qpe
+   HC
+   PIA
+   interp
+   CR
+   CAPPI_product
+   VR
 
 
 开发者信息
