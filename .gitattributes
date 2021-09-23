@@ -1,12 +1,8 @@
 # Set the default behavior, in case people don't have core.autocrlf set.
 * text eol=lf
-
-
 # Explicitly declare text files you want to always be normalized and converted
 # to native line endings on checkout.
-
 *.txt       text
-
 # Source code
 *.c         text
 *.cpp       text
@@ -25,7 +21,6 @@
 *.Rmd       text
 *.Rnw       text
 *.sh        text
-
 # Documentation
 *.adoc      text
 *.latex     text
@@ -39,7 +34,6 @@
 *.TeX       text
 *.tmpl      text
 *.tpl       text
-
 # Web
 *.atom      text
 *.css       text
@@ -55,7 +49,6 @@
 *.scss      text
 *.xht       text
 *.xhtml     text
-
 # Configuration
 *.cfg       text
 *.cnf       text
@@ -69,7 +62,6 @@
 *.xml       text
 *.yml       text
 *.yaml      text
-
 # Plain text data
 *.cdl       text
 *.csv       text
@@ -83,7 +75,6 @@
 *.tab       text
 *.tsv       text
 *.wkt       text
-
 # Special files
 .*rc            text
 .checkignore    text
@@ -97,7 +88,6 @@
 *.lektorproject text
 .nojekyll       text
 .project        text
-
 AUTHORS         text
 CHANGELOG       text
 CHANGES         text
@@ -111,22 +101,16 @@ readme          text
 *README*        text
 RELEASE         text
 TODO            text
-
 browserslist    text
 contents.lr     text
 makefile        text
 Makefile        text
 MANIFEST.in     text
-
-
 # Declare files that will always have CRLF line endings on checkout.
 *.bat text eol=crlf
 *.vbs text eol=crlf
 *.ps1 text eol=crlf
-
-
 # Denote all files that are truly binary and should not be modified.
-
 # Executable
 *.app       binary
 *.bin       binary
@@ -149,7 +133,6 @@ MANIFEST.in     text
 *.rpm       binary
 *.so        binary
 *.sys       binary
-
 # Data
 *.cdf       binary
 *.db        binary
@@ -185,7 +168,6 @@ MANIFEST.in     text
 *.XLS       binary
 *.xlsx      binary
 *.XLSX      binary
-
 # Documents
 *.doc       binary
 *.DOC       binary
@@ -204,7 +186,6 @@ MANIFEST.in     text
 *.PPTX      binary
 *.rtf       binary
 *.RTF       binary
-
 # Graphics
 *.ai        binary
 *.bmp       binary
@@ -228,7 +209,6 @@ MANIFEST.in     text
 *.tiff      binary
 *.webp      binary
 *.xcf       binary
-
 # Fonts
 *.eot       binary
 *.otc       binary
@@ -237,7 +217,6 @@ MANIFEST.in     text
 *.ttf       binary
 *.woff      binary
 *.woff2     binary
-
 # Audio/Video
 *.aac       binary
 *.flac      binary
@@ -251,8 +230,6 @@ MANIFEST.in     text
 *.opus      binary
 *.wav       binary
 *.webm      binary
-
-
 # Archives
 *.7z        binary
 *.bz2       binary
@@ -269,13 +246,12 @@ MANIFEST.in     text
 *.txz       binary
 *.xz        binary
 *.zip       binary
-
 # Spyder-related
 *.results   binary
 *.spydata   binary
-
 # Other
 *.bak       binary
 *.lnk       binary
 *.temp      binary
 *.tmp       binary
+data/NUIST.20150627.002438.AR2.bz2 filter=lfs diff=lfs merge=lfs -text
