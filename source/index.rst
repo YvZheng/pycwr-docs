@@ -41,7 +41,6 @@ PyCWR_  （Python based China Weather Radar Toolkit）主要面向中国天气�
 * :doc:`数据读取`
 * :doc:`数据结构`
 * :doc:`绘图`
-* :doc:`选取数据`
 * :doc:`导出数据`
 * :doc:`定量估测降水`
 * :doc:`水凝物分类`
@@ -60,7 +59,6 @@ PyCWR_  （Python based China Weather Radar Toolkit）主要面向中国天气�
    data_read
    data_structure
    draw
-   select_data
    save_data
    qpe
    HC
