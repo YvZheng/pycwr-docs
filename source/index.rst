@@ -56,7 +56,7 @@ PyCWR_  （Python based China Weather Radar Toolkit）主要面向中国天气�
    :hidden:
    :caption: 用户指南
 
-   数据读取
+   data_read
    data_structure
    draw
    save_data
