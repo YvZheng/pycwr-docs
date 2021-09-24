@@ -27,3 +27,26 @@ PPI绘图不叠加地图：
     :align: center
     :alt: reStructuredText, the markup syntax
 
+PPI绘图叠加地图：
+
+.. code-block:: python
+    :linenos:
+    :emphasize-lines: 3,5
+    from pycwr.io import read_auto
+    import matplotlib.pyplot as plt
+    from pycwr.draw.RadarPlot import GraphMap
+    import cartopy.crs as ccrs
+    filename = r"./data/Z_RADR_I_Z9898_20190828181529_O_DOR_SAD_CAP_FMT.bin.bz2"
+    PRD = read_auto(filename)
+
+    ax = plt.axes(projection=ccrs.PlateCarree())
+    graph = GraphMap(PRD, ccrs.PlateCarree())
+    graph.plot_ppi_map(ax, 0, "dBZ", cmap="CN_ref") ## 0代表第一层, dBZ代表反射率产品，cmap
+    ax.set_title("PPI Plot with Map", fontsize=16)
+    plt.tight_layout()
+    plt.show()
+
+.. image:: _static/draw_02.png
+    :height: 400px
+    :align: center
+    :alt: reStructuredText, the markup syntax
