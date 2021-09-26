@@ -89,7 +89,7 @@ PPI绘图叠加地图：
     import matplotlib.pyplot as plt
     from pycwr.draw.RadarPlot import Graph
 
-    filename = r"../../data/Z_RADR_I_Z9898_20190828181529_O_DOR_SAD_CAP_FMT.bin.bz2"
+    filename = r"./data/Z_RADR_I_Z9898_20190828181529_O_DOR_SAD_CAP_FMT.bin.bz2"
     PRD = read_auto(filename)
 
     fig, ax = plt.subplots()
