@@ -48,7 +48,7 @@ Anaconda安装完毕后请按照 conda源修改教程_ 修改conda源为清华�
 
     .. code-block:: sh
 
-        pip install pycwr==0.3.1
+        pip install pycwr==0.3.4
 
 隔离环境安装 *PyCWR* （推荐）
 ---------------------------
@@ -71,7 +71,7 @@ Anaconda安装完毕后请按照 conda源修改教程_ 修改conda源为清华�
 
     .. code-block:: sh
 
-        pip install pycwr==0.3.1
+        pip install pycwr==0.3.4
 
 
 
