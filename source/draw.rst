@@ -94,7 +94,7 @@ PPI绘图叠加地图：
 
     fig, ax = plt.subplots()
     graph = Graph(PRD)
-    graph.plot_vcs(ax, (0,0), (150, 0), "dBZ", cmap="pyart_NWSRef") #起点，终点 （units: km）
+    graph.plot_vcs(ax, (0,0), (150, 0), "dBZ", cmap="copy_pyart_NWSRef") #起点，终点 （units: km）
     ax.set_ylim([0, 15])
     ax.set_xlim([0, 80])
     ax.set_ylabel("Height (km)", fontsize=14)

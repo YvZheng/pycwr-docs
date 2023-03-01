@@ -3,7 +3,7 @@
 
 Anaconda
 ------------
-目前 *PyCWR* 仅支持Python3，推荐使用Python3.6及以上版本的Anaconda。
+目前 *PyCWR* 仅支持Python3，推荐使用Python3.8及以上版本的Anaconda。
 
 由于国内墙下载速度的限制，推荐在 清华镜像站_ 下载并安装Anaconda，提高下载速度。
 
@@ -48,7 +48,7 @@ Anaconda安装完毕后请按照 conda源修改教程_ 修改conda源为清华�
 
     .. code-block:: sh
 
-        pip install pycwr==0.3.4
+        pip install pycwr==0.3.6
 
 隔离环境安装 *PyCWR* （推荐）
 ---------------------------
@@ -71,7 +71,7 @@ Anaconda安装完毕后请按照 conda源修改教程_ 修改conda源为清华�
 
     .. code-block:: sh
 
-        pip install pycwr==0.3.4
+        pip install pycwr==0.3.6
 
 
 
