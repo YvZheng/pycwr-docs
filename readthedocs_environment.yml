@@ -1,16 +1,12 @@
 channels:
   - conda-forge
 dependencies:
-  - python=3.6
-  - sphinx>=1.4
+  - python=3.11
+  - sphinx>=7,<9
   - pandoc
   - nbconvert
   - ipykernel
   - sphinx_rtd_theme
-  - sphinxcontrib-bibtex
-  - numpy
-  - deprecation
-  - git
   - nbsphinx
-  - semver
-  - xmltodict
+  - xarray
+  - numpy

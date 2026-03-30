@@ -1,64 +1,59 @@
 PyCWR简介
 ===================
 
-中国天气雷达基数据的格式由于历史遗留问题多种多样，文件复杂，雷达数据的处理和应用往往需要重要的先验知识和技能，各种算法难以统一实施。
-基于Python的中国天气雷达（PyCWR）库旨在解决这些问题并使雷达数据变得易于使用。
+中国天气雷达基数据格式历史包袱较重，不同厂家、不同年代、不同业务链路之间差异很大。
+PyCWR 的目标是把这些输入统一成可读、可画、可处理、可导出的 Python 工作流。
 
-.. Important::
-    - 它支持几乎所有中国业务天气雷达基数据格式，包含WSR98D、CINRAD/SA/SB/CB、CINRAD/CC/CCJ、CINRAD/SC/CD和相控阵等雷达基数据格式；
-    - 定义用于表示雷达数据的核心Python对象，而该对象是使用xarray的Dataset构建的，Dataset是类似dict的具有对齐尺寸的带标签数组的容器；
-    - 提供了经过良好测试的算法（数据质量控制，水凝物分类，定量降水估计等），并使用Cython加速核心算法；
-    - 建立开放的平台，供研究人员从天气雷达观测中开发复杂的分析和应用程序，它还提供了图形用户界面工具，以方便进行水文学和气象学分析。
+当前版本重点能力
+------------------
 
+- 常见中国业务天气雷达格式 reader
+- 统一的 `PRD` 体扫对象
+- `aligned/native` 反射率双工作流
+- 绘图、QC、水凝物分类、风场反演
+- 多雷达组网插值
+- Py-ART / xradar / WSR98D / NEXRAD 导出
+- 本地 Web viewer
 
-#. 天气雷达PPI扫描显示：
+项目特点
+------------------
+
+- reader 侧优先保证行为兼容和结果一致
+- `PRD` 基于 `xarray.Dataset`，便于后续分析
+- 核心几何与部分热点路径带有 Cython 加速
+- corrected 字段和原始字段分离存储，便于科研对照与业务落地
+
+示意图
+------------------
+
+#. 天气雷达 PPI 扫描显示
 
     .. image:: _static/PPI.png
         :height: 500px
         :width: 583px
         :align: center
-        :alt: reStructuredText, the markup syntax
+        :alt: PPI
 
-#. 天气雷达RHI扫描显示：
+#. 天气雷达 RHI 扫描显示
 
     .. image:: _static/RHI.png
         :height: 500px
         :width: 608px
         :align: center
-        :alt: reStructuredText, the markup syntax
+        :alt: RHI
 
-#. 天气雷达CAPPI插值显示：
+#. 天气雷达 CAPPI 插值显示
 
     .. image:: _static/CAPPI.png
         :height: 500px
         :width: 583px
         :align: center
-        :alt: reStructuredText, the markup syntax
+        :alt: CAPPI
 
-#. 天气雷达组合反射率因子显示：
-
-    .. image:: _static/CRF.png
-        :height: 500px
-        :width: 583px
-        :align: center
-        :alt: reStructuredText, the markup syntax
-
-#. 天气雷达VCS垂直剖面图：
-
-    .. image:: _static/VCS.png
-        :height: 500px
-        :width: 592px
-        :align: center
-        :alt: reStructuredText, the markup syntax
-
-#. 水凝物分类算法： 
+#. 水凝物分类示意
 
     .. image:: _static/HC.png
         :height: 500px
         :width: 623px
         :align: center
-        :alt: reStructuredText, the markup syntax
-
-#. 更多功能更新中...
-
-
+        :alt: HC

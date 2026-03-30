@@ -1,30 +1,38 @@
 图形化界面显示
 =================
 
-用Python执行此脚本可以启动图形化界面程序：
+这页讲使用流程。程序化入口和后端接口清单请继续看 :doc:`api/web`。
 
-.. code-block:: python   
-    :linenos:   
-    :emphasize-lines: 3,5
-    
-    import warnings
-    warnings.filterwarnings('ignore')
-    import os, sys
-    sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-    from pycwr.GraphicalInterface.RadarInterface import MainWindow
-    from PyQt5 import QtWidgets
-    app = QtWidgets.QApplication(sys.argv)
-    ui = MainWindow()
-    ui.show()
-    sys.exit(app.exec_())
+PyCWR 当前推荐的图形界面入口是本地 Web viewer，而不是旧版 PyQt GUI。
 
-图形化界面打开后如下图：
+启动方式
+-----------------
 
-.. image:: _static/GUI.png
-    :height: 500px
-    :width: 607px
-    :align: center
-    :alt: reStructuredText, the markup syntax
+.. code-block:: bash
 
-在右侧可以选择要显示的 **产品** 和 **仰角** ，在 **设置->显示设置->叠加地图** 可以选择显示的图像是否叠加地图。
+    python scripts/LaunchGUI.py
 
+默认页面地址：
+
+.. code-block:: text
+
+    http://127.0.0.1:8787/
+
+页面能做什么
+-----------------
+
+- 输入本地雷达目录并扫描文件
+- 选择文件、场和仰角
+- 切换 `Map Mode`
+- 切换连续色标
+- 浏览时间序列并下载当前 PNG
+
+约束
+-----------------
+
+- viewer 默认只允许本机访问
+- 页面会自动注入 token
+- 手工请求 `/api/*` 或 `/plot/*` 时必须携带 token
+- 文件浏览被限制在允许目录内
+
+这套 Web viewer 是轻量本地浏览器界面，不再试图完全复刻旧 PyQt 交互。

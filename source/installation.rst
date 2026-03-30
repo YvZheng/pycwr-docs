@@ -1,80 +1,62 @@
 安装方法
 ===================
 
-Anaconda
+PyCWR 1.0.4 当前要求：
+
+- Python `>=3.9`
+- 基础功能可直接用 `pip`
+- 如果需要绘图、QC、Web viewer、Py-ART / xradar 互操作，建议安装 full 依赖
+
+基础安装
 ------------
-目前 *PyCWR* 仅支持Python3，推荐使用Python3.8及以上版本的Anaconda。
 
-由于国内墙下载速度的限制，推荐在 清华镜像站_ 下载并安装Anaconda，提高下载速度。
+.. code-block:: bash
 
-Anaconda安装完毕后请按照 conda源修改教程_ 修改conda源为清华源，按照以下教程修改pip源为豆瓣源以提高库的安装速度，节省您的时间。
+    python -m pip install -r requirements-core.txt
+    python -m pip install .
 
-#. Linux/Mac平台
+这条路径足够支持：
 
-    Linux/Mac用户将它命名为pip.conf ::
+- reader
+- `PRD`
+- 几何计算
+- 插值
+- NetCDF 风格导出
 
-        [global]
-        timeout = 60
-        index-url = http://pypi.douban.com/simple
-        trusted-host = pypi.douban.com
+全功能安装
+------------
 
-    然后将该文件放在 ``$HOME/.pip/pip.conf`` 位置
+.. code-block:: bash
 
-#. Windows平台
+    python -m pip install -r requirements-full.txt
+    python -m pip install ".[full]"
 
+这条路径额外覆盖：
 
-    Windows用户将它命名为pip.ini ::
+- 绘图和地图绘图
+- 双偏振 QC
+- 本地 Web viewer
+- Py-ART / xradar 互操作
 
-        [global]
-        timeout = 60
-        index-url = http://pypi.douban.com/simple
-        trusted-host = pypi.douban.com
+说明
+------------
 
-    然后将该文件放在 ``%HOME%\pip\pip.ini`` 位置
+- 上游 `arm_pyart` 和 `xradar` 当前要求 Python `>=3.10`
+- 因此在 Python `3.9` 上，full 安装仍然可以用于绘图、QC 和 Web viewer，但不包含这两类互操作能力
+- `pandas` 在 `1.0.4` 中限制为 `<3`，优先保证发布稳定性
 
-
-直接安装 *PyCWR* 在base环境
+从源码重编译 Cython 扩展
 ---------------------------
 
-由于Cartopy采用pip安装容易出错，但 *PyCWR* 画图部分需要依赖 Cartopy_， 因此需要先采用conda来安装 Cartopy_，再使用pip安装 *PyCWR*。
+如果修改了 `pycwr/core/RadarGridC.pyx`，重编译方式为：
 
-#. 首先使用conda安装Cartopy
+.. code-block:: bash
 
-    .. code-block:: sh
+    python setup.py build_ext --inplace
 
-        conda install cartopy -c conda-forge --yes
-
-#. 然后使用pip安装PyCWR
-
-    .. code-block:: sh
-
-        pip install pycwr==0.3.6
-
-隔离环境安装 *PyCWR* （推荐）
+构建发布产物
 ---------------------------
 
-为防止 *PyCWR* 环境与base环境冲突，推荐使用隔离环境的方式安装。
+.. code-block:: bash
 
-#. 首先使用conda隔离环境并安装Cartopy
-
-    .. code-block:: sh
-
-        conda create -n cwr cartopy -c conda-forge --yes
-
-#. 再切换到隔离的cwr环境
-
-    .. code-block:: sh
-
-        conda activate cwr
-
-#. 最后在cwr环境中使用pip安装PyCWR
-
-    .. code-block:: sh
-
-        pip install pycwr==0.3.6
-
-
-
-.. _清华镜像站: https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/
-.. _conda源修改教程: https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/
-.. _Cartopy: https://scitools.org.uk/cartopy/docs/latest/
+    python -m build

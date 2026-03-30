@@ -1,10 +1,6 @@
-sphinx>=1.4
+sphinx>=7,<9
+sphinx_rtd_theme>=2,<4
+nbsphinx>=0.9
 nbconvert
 ipykernel
-sphinx_rtd_theme
-sphinxcontrib-bibtex
-deprecation
-nbsphinx
-xmltodict
-semver
 xarray

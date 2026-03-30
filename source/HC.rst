@@ -1,53 +1,44 @@
 水凝物分类
 ===============
 
-水凝物分类示例程序：
+这页先讲 workflow。更细的函数入口和返回结果请继续看 :doc:`api/retrieve`。
+
+PyCWR 当前推荐的公开入口是：
+
+- `classify_hydrometeors(...)`
+- `radar.classify_hydrometeors(...)`
+- `radar.add_hydrometeor_classification(...)`
+
+支持两种模式：
+
+- 提供温度廓线
+- 不提供廓线，走无廓线近似流程
+
+示例
+------------------
 
 .. code-block:: python
-    :linenos:
-    :emphasize-lines: 3,5
 
-    # -*- coding: utf-8 -*-
-    from pycwr.io import read_auto
-    from pycwr.retrieve.HID import fhc_HCL
-    import matplotlib.pyplot as plt
-    import numpy as np
-    from pycwr.draw.RadarPlot import plot_xy, add_rings
-    import pandas as pd
+    hcl_radar = radar.classify_hydrometeors(
+        inplace=False,
+        band="C",
+        profile_height=[0.0, 2000.0, 4000.0, 8000.0, 12000.0],
+        profile_temperature=[24.0, 12.0, 2.0, -16.0, -40.0],
+        confidence_field="HCL_CONF",
+        temperature_field="HCL_T",
+    )
 
-    file = r"./data/NUIST.20150627.002438.AR2.bz2"
-    file_t = r"./data/20150627.csv"
-    temp = pd.read_csv(file_t, index_col=0, header=None, names=['temp'])
+输出
+------------------
 
-    NRadar = read_auto(file)
-    num = 3
-    dBZ = np.where(NRadar.fields[num].CC>0.9, NRadar.fields[num].dBZ, np.nan)
-    KDP = np.where(NRadar.fields[num].CC>0.9, NRadar.fields[num].KDP, np.nan)
-    ZDR = np.where(NRadar.fields[num].CC>0.9, NRadar.fields[num].ZDR, np.nan)
-    CC = np.where(NRadar.fields[num].CC>0.9, NRadar.fields[num].CC, np.nan)
-    temp_2d = np.interp(NRadar.fields[num].z.values/1000., temp.index, temp['temp'])
-    dBZ[:,0] = np.nan
-    ticks = np.arange(1, 11, 1)
-    ticklabels = ['Drizzle', 'Rain', 'Ice Crystals', 'Aggregates', 'Wet Snow', 'Vertical Ice',
-                    'LD Graupel', 'HD Graupel', 'Hail', 'Big Drops']
+分类结果会作为 gate-level 字段写回 `PRD.fields`，常见字段包括：
 
-    hcl = fhc_HCL(dBZ=dBZ, KDP=KDP, ZDR=ZDR, CC = CC, T=temp_2d)
-    fig, ax = plt.subplots()
-    plot_xy(ax, NRadar.fields[num].x, NRadar.fields[num].y, hcl,
-            cmap="CN_hcl", bounds=np.arange(0.5,10.6,1),
-            cbar_ticks=ticks, cbar_ticklabels=ticklabels)
-    add_rings(ax=ax, rings=[0, 50, 100, 150])
-    ax.set_xlim([-150, 150])
-    ax.set_ylim([-150, 150])
-    ax.set_xlabel("Distance From Radar In East (km)", fontsize=12)
-    ax.set_ylabel("Distance From Radar In North (km)", fontsize=12)
-    ax.set_title("Hydrometeor classification, El : 3.4", fontsize=14)
-    plt.savefig(r"./201506270024_HC.png", dpi=600)
-    plt.show()
+- `HCL`
+- `HCL_CONF`
+- `HCL_T`
 
-水凝物分类效果：
+说明
+------------------
 
-.. image:: _static/201506270024_HC.png
-    :height: 400px
-    :align: center
-    :alt: reStructuredText, the markup syntax
+- corrected 字段存在时，分类优先使用 `Zc / ZDRc / KDPc`
+- `HCL` 色标和中文类别名在当前 draw / web viewer 层已经统一
