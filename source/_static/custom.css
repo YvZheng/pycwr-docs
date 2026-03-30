@@ -107,3 +107,37 @@
   background: #f5f9fc;
   color: #37526a;
 }
+
+.lang-switch {
+  padding: 0.8rem 1rem;
+  margin: 0.6rem 0 1rem 0;
+  border-radius: 10px;
+  border: 1px solid #d6e3ee;
+  background: #fcfdff;
+}
+
+.lang-switch p {
+  margin: 0;
+}
+
+.step-grid,
+.compare-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin: 1rem 0 1.4rem 0;
+}
+
+.step-card,
+.compare-card {
+  padding: 1rem 1.05rem;
+  border-radius: 12px;
+  border: 1px solid #d8e4ef;
+  background: #fff;
+}
+
+.step-card h3,
+.compare-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.55rem;
+}

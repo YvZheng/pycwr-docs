@@ -1,6 +1,10 @@
 API 手册
 ========
 
+.. container:: lang-switch
+
+   English version: :doc:`/en/api/index`
+
 这组页面专门讲 ``pycwr 1.0.4`` 的公开接口，不再把 API 信息分散在 workflow 页面里。
 
 .. container:: section-note
@@ -43,6 +47,34 @@ API 手册
       :doc:`处理 / Viewer API <web>`
 
       包括 HID、风场反演、QC、组网插值和本地 Web viewer。
+
+.. container:: compare-grid
+
+   .. container:: compare-card
+
+      **如果你是第一次使用**
+
+      先看 :doc:`/data_read`、:doc:`/data_structure`、:doc:`/draw` 这三页，
+      先把 workflow 跑通。
+
+   .. container:: compare-card
+
+      **如果你已经在写脚本**
+
+      直接进入 ``IO``、``PRD``、``QC`` 和 ``retrieve`` 相关 API 页，
+      查参数、返回值和字段约定。
+
+API 组织方式
+----------------
+
+这组页面按“用户要完成什么任务”组织，而不是按源码目录逐层展开：
+
+- ``IO``：先把文件读成 ``PRD``，或把 ``PRD`` 导出到标准格式
+- ``PRD``：查看 sweep、字段、``aligned/native`` 和对象方法
+- ``draw``：快速出图和兼容旧接口
+- ``retrieve``：HID 和风场反演
+- ``qc_interp``：QC、衰减订正和组网插值
+- ``web``：本地 viewer、后端入口和使用边界
 
 .. toctree::
    :maxdepth: 1

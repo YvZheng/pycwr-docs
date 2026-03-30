@@ -11,6 +11,10 @@
 :Release: 1.0.4
 :Date: |today|
 
+.. container:: lang-switch
+
+   Switch language: :doc:`English overview </en/index>`
+
 .. container:: doc-hero
 
    .. container:: doc-eyebrow
@@ -133,6 +137,13 @@
    :caption: API 手册
 
    api/index
+
+.. toctree::
+   :maxdepth: 1
+   :hidden:
+   :caption: English
+
+   en/index
 
 开发者信息
 -----------
