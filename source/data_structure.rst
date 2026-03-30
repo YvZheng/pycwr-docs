@@ -1,6 +1,10 @@
 数据结构
 ========
 
+.. container:: lang-switch
+
+   English version: :doc:`/en/data_structure`
+
 PyCWR 的中心对象是 ``PRD`` (Polarimetry Radar Data)。
 
 reader 把原始雷达基数据统一转换成 ``PRD``，后续绘图、QC、插值、导出基本都围绕它展开。

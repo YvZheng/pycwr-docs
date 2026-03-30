@@ -1,6 +1,10 @@
 数据读取
 =================
 
+.. container:: lang-switch
+
+   English version: :doc:`/en/data_read`
+
 这页解决两个问题：
 
 - 第一次拿到雷达文件时应该从哪里读

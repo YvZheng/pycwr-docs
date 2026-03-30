@@ -1,6 +1,10 @@
 导出数据
 ==============
 
+.. container:: lang-switch
+
+   English version: :doc:`/en/save_data`
+
 这页讲的是“导出工作流怎么走”，参数和接口清单请继续看 :doc:`api/io` 和 :doc:`api/prd`。
 
 PyCWR 1.0.4 当前公开的导出路径不再只限于 Py-ART。
