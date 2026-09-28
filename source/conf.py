@@ -12,7 +12,7 @@ if PYCWR_REPO.exists():
 project = "pycwr"
 copyright = "2019-2026, pycwr developers"
 author = "Yu Zheng"
-release = "1.0.4"
+release = "1.0.9"
 master_doc = "index"
 
 extensions = [
@@ -42,5 +42,5 @@ html_theme_options = {
 }
 html_static_path = ["_static"]
 html_css_files = ["custom.css"]
-html_title = "pycwr 1.0.4 文档"
+html_title = "pycwr 1.0.9 文档"
 html_show_copyright = True

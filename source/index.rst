@@ -8,7 +8,7 @@
 *PyCWR*：中国天气雷达处理工具库
 ===========================================
 
-:Release: 1.0.4
+:Release: 1.0.9
 :Date: |today|
 
 .. container:: lang-switch
@@ -25,7 +25,7 @@
 
    .. container:: doc-lead
 
-      这套手册围绕 ``pycwr 1.0.4`` 的公开能力组织，目标是让你能够快速完成
+      这套手册围绕 ``pycwr 1.0.9`` 的公开能力组织，目标是让你能够快速完成
       读取、检查、绘图、QC、HID、风场反演、组网插值和标准格式导出。
 
    .. container:: doc-callout
@@ -43,6 +43,10 @@
 - 多雷达组网插值
 - Py-ART / xradar / WSR98D / NEXRAD 导出
 - 本地 Web viewer
+
+``1.0.9`` 中，QC、HID、风场反演及 CR / VIL / ET 计算将掩码样本作为缺测处理。
+绘图和导出的使用说明见 :doc:`draw` 与 :doc:`save_data`；完整修复记录见
+`v1.0.9 发布说明 <https://github.com/YvZheng/pycwr/releases/tag/v1.0.9>`_。
 
 .. _PyCWR: https://github.com/YvZheng/pycwr
 
@@ -150,4 +154,4 @@
 
 :作者: 郑玉；pycwr contributors
 :项目主页: https://github.com/YvZheng/pycwr
-:当前手册版本: 1.0.4
+:当前手册版本: 1.0.9

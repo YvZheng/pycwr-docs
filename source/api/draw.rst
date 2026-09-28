@@ -11,9 +11,9 @@
 
       plot_ppi(radar, field="dBZ", sweep=0, show=True, **kwargs)
       plot_ppi_map(radar, field="dBZ", sweep=0, show=True, **kwargs)
-      plot_rhi(radar, field="dBZ", sweep=0, show=True, **kwargs)
-      plot_section(radar, field="dBZ", start_xy=None, end_xy=None, show=True, **kwargs)
-      plot_section_lonlat(radar, field="dBZ", start_lonlat=None, end_lonlat=None, show=True, **kwargs)
+      plot_rhi(radar, field="dBZ", azimuth=0, show=True, **kwargs)
+      plot_section(radar, field="dBZ", start=(-30, 0), end=(30, 0), show=True, **kwargs)
+      plot_section_lonlat(radar, field="dBZ", start_lonlat=(118.5, 32.0), end_lonlat=(119.0, 32.0), show=True, **kwargs)
       plot_vvp(...)
       plot_wind_profile(...)
 
@@ -23,8 +23,7 @@
 
    .. code-block:: python
 
-      from pycwr.draw.RadarPlot import Graph
-      from pycwr.draw.SingleRadarPlotMap import GraphMap
+      from pycwr.draw.RadarPlot import Graph, GraphMap
 
    这组接口主要用于兼容旧项目或旧示例。
 
@@ -43,7 +42,7 @@
 
    radar = read_auto("./data/file.bin.bz2")
    plot_ppi(radar, field="dBZ", sweep=0, show=True)
-   plot_section(radar, field="HCL", start_xy=(-30000, 0), end_xy=(30000, 0), show=True)
+   plot_section(radar, field="dBZ", start=(-30, 0), end=(30, 0), show=True)
 
 .. rubric:: 相关页面
 
