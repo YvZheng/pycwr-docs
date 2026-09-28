@@ -8,7 +8,7 @@ Export Data
 This page focuses on export workflows. For the public writer and object-method list,
 see :doc:`/api/io` and :doc:`/api/prd`.
 
-``pycwr 1.0.4`` does not limit export to Py-ART anymore.
+``pycwr 1.0.9`` does not limit export to Py-ART anymore.
 
 Recommended object-style export
 -------------------------------
@@ -64,6 +64,9 @@ Notes
 - ``NEXRAD`` export is mainly for interoperability with Py-ART and external workflows
 - Corrected fields and raw fields remain separate variables inside ``PRD``
 - When exporting to standard interfaces, ``pycwr`` chooses a suitable source field according to the current public rules
+- ``WSR98D`` / ``NEXRAD MSG31`` select per-field offsets and storage widths while keeping the quantization scale, preserving valid low and high values; unrepresentable values raise an error
+- ``WSR98D`` / ``NEXRAD`` export requires uniformly spaced range gates; ``NEXRAD`` also requires gate starts and spacing to be representable in integer metres
+- Sweep datasets returned by ``to_xradar_sweeps()`` can be written with ``to_netcdf()``; datetime coordinates use NetCDF encoding
 
 Related pages
 -------------

@@ -5,7 +5,7 @@ API 手册
 
    English version: :doc:`/en/api/index`
 
-这组页面专门讲 ``pycwr 1.0.4`` 的公开接口，不再把 API 信息分散在 workflow 页面里。
+这组页面专门讲 ``pycwr 1.0.9`` 的公开接口，不再把 API 信息分散在 workflow 页面里。
 
 .. container:: section-note
 

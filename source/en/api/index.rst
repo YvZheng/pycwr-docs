@@ -5,7 +5,7 @@ API Overview
 
    中文版: :doc:`/api/index`
 
-This page is the English reference hub for the public ``pycwr 1.0.4`` API surface.
+This page is the English reference hub for the public ``pycwr 1.0.9`` API surface.
 Detailed workflow pages remain primarily Chinese, but the public entrypoints are grouped
 here in an implementation-oriented way.
 
